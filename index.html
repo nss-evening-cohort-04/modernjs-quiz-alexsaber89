@@ -7,8 +7,48 @@
     <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
   <body>
-    <div id="container">
+
+    <div class="jumbotron container">
+      <h1>Robot Battledome</h1>
     </div>
+
+    <div id="player_container">
+      <div id="player_1">
+        <div class="input-group-md">
+          <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+        </div>
+        <br />
+        <div class="form-group">
+          <select class="form-control" id="player_1_robot">
+            <option selected="true">Select your robot</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+      </div> <!-- player_1 -->
+
+      <div id="player_2">
+        <div class="input-group-md">
+          <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+        </div>
+        <br />
+        <div class="form-group">
+          <select class="form-control" id="player_1_robot">
+            <option selected="true">Select your robot</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+      </div> <!-- player_2 -->
+    </div> <!-- player_container -->
+
+    <div id="battle">
+    </div>
+
   <script type="text/javascript" src="bower_components\jquery\dist\jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/robot.js"></script>

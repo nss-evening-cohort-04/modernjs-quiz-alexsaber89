@@ -1,0 +1,21 @@
+#player_container {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#player_1,
+#player_2 {
+  width: 50%;
+  margin: 0 1%;
+}
+
+.jumbotron {
+  height: 10%;
+  padding: 3% 0;
+}
+
+.jumbotron h1 {
+  text-align: center;
+  margin: 0;
+}
