@@ -84,6 +84,7 @@ function displayBattleDetails() {
   }
 }
 
+
 //Events
 playerOneRobotChoices.change(checkIfUsersEnteredNames);
 playerTwoRobotChoices.change(checkIfUsersEnteredNames);
