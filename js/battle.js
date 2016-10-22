@@ -74,13 +74,17 @@ function displayBattleDetails() {
   playerTwo.healthRange -= playerOne.damageRange;
   if(playerTwo.healthRange < 1) {
     $("#myModal").modal('show');
-    $("#myModalLabel").html(`${playerOne.userName} wins!`);
+    $("#myModalLabel").html(`${playerOne.userName} wins!<br />`);
+    $("#myModalLabel").append(`  Health Remaining:  ${playerOne.userName} = ${playerOne.healthRange}`);
+    $("#myModalLabel").append(`  ${playerTwo.userName}: ${playerTwo.healthRange}`);
   } else if (playerOne.healthRange < 1) {
     $("#myModal").modal('show');
-    $("#myModalLabel").html(`${playerTwo.userName} wins!`);
+    $("#myModalLabel").html(`${playerTwo.userName} wins!<br />`);
+    $("#myModalLabel").append(`  ${playerTwo.userName}: ${playerTwo.healthRange}`);
+    $("#myModalLabel").append(`  Health Remaining:  ${playerOne.userName}: ${playerOne.healthRange}`);
   } else {
-    battleDetails.html(`Turn ${numberOfTurns}: ${playerOne.userName} attacked ${playerTwo.userName} with ${playerOne.weapon} for ${playerOne.damageRange} damage!`);
-    battleDetails.append(`  ${playerTwo.userName} attacked ${playerOne.userName} with ${playerTwo.weapon} for ${playerTwo.damageRange} damage!`);
+    battleDetails.html(`Turn ${numberOfTurns}: ${playerOne.userName} attacked ${playerTwo.userName} with ${playerOne.weapon} for ${playerOne.damageRange} damage (${playerTwo.healthRange} health remaining)`);
+    battleDetails.append(`  ${playerTwo.userName} attacked ${playerOne.userName} with ${playerTwo.weapon} for ${playerTwo.damageRange} damage (${playerOne.healthRange} health remaining)`);
   }
 }
 
