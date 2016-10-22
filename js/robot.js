@@ -5,6 +5,7 @@ const Robot = function() {
   this.damage = 50;
   this.health = 100;
   this.weapon = null;
+  this.userName = null;
 };
 
 
@@ -18,8 +19,8 @@ Drone.prototype = new Robot();
 //Models
 const Warthog = function() {
   this.name = "Warthog";
-  this.health += 50;
-  this.damageRange = null;
+  this.healthRange = 50;
+  this.damageRange = 20;
   this.weapon = "Charge";
 };
 
@@ -28,8 +29,8 @@ Warthog.prototype = new Drone();
 
 const Hawk = function() {
   this.name = "Hawk";
-  this.healthRange = null;
-  this.damageRange = null;
+  this.healthRange = 600;
+  this.damageRange = 20;
   this.weapon = "Talons";
 };
 
@@ -46,17 +47,17 @@ Bipedal.prototype = new Robot();
 //Models
 const Kangaroo = function() {
   this.name = "Kangaroo";
-  this.healthRange = null;
-  this.damageRange = null;
+  this.healthRange = 30;
+  this.damageRange = 20;
   this.weapon = "Punch";
 };
 
 Kangaroo.prototype = new Bipedal();
 
 const MAN = function() {
-  this.name = "M.A.N.";
-  this.healthRange = null;
-  this.damageRange = null;
+  this.name = "MAN";
+  this.healthRange = 35;
+  this.damageRange = 20;
   this.weapon = "Knowledge";
 };
 
@@ -73,18 +74,18 @@ ATV.prototype = new Robot();
 //Models
 const Raptor = function() {
   this.name = "Raptor";
-  this.healthRange = null;
-  this.damageRange = null;
+  this.healthRange = 40;
+  this.damageRange = 20;
   this.weapon = "Flamethrower";
 };
 
 Raptor.prototype = new ATV();
 
-const Jheep = function() {
-  this.name = "Jheep";
-  this.healthRange = null;
-  this.damageRange = null;
+const Jeep = function() {
+  this.name = "Jeep";
+  this.healthRange = 50;
+  this.damageRange = 20;
   this.weapon = "Winch";
 };
 
-Jheep.prototype = new ATV();
+Jeep.prototype = new ATV();

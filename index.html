@@ -10,48 +10,74 @@
 
     <div class="jumbotron container">
       <h1>Robot Battledome</h1>
+      <p>Enter player names, then choose player robots.  An attack button will appear!</p>
     </div>
 
     <div id="player_container">
       <div id="player_options_container">
         <div id="player_1">
           <div class="input-group-md">
-            <input type="text" id="player_1_name_input" class="form-control" placeholder="Enter your robot's name" aria-describedby="sizing-addon1">
+            <input type="text" id="player_1_name_input" class="form-control" placeholder="Player 1: Enter your name" aria-describedby="sizing-addon1">
           </div>
           <br />
           <div class="form-group">
             <select class="form-control" id="player_1_robot">
               <option selected="true">Select your robot</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
+              <option>Warthog</option>
+              <option>Hawk</option>
+              <option>Kangaroo</option>
+              <option>MAN</option>
+              <option>Raptor</option>
+              <option>Jeep</option>
             </select>
           </div>
         </div> <!-- player_1 -->
 
         <div id="player_2">
           <div class="input-group-md">
-            <input type="text" id="player_2_name_input" class="form-control" placeholder="Enter your robot's name" aria-describedby="sizing-addon1">
+            <input type="text" id="player_2_name_input" class="form-control" placeholder="Player 2: Enter your name" aria-describedby="sizing-addon1">
           </div>
           <br />
           <div class="form-group">
             <select class="form-control" id="player_2_robot">
               <option selected="true">Select your robot</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
+              <option>Warthog</option>
+              <option>Hawk</option>
+              <option>Kangaroo</option>
+              <option>MAN</option>
+              <option>Raptor</option>
+              <option>Jeep</option>
             </select>
           </div>
         </div> <!-- player_2 -->
       </div> <!-- player_options_container -->
-      <div id="attack_btn_container">
+      <div id="attack_btn_container" class="invisible">
         <button type="button" class="btn btn-danger" id="attack_btn">Attack!</button>
       </div>
     </div> <!-- player_container -->
 
     <div id="battle">
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
     </div>
 
   <script type="text/javascript" src="bower_components\jquery\dist\jquery.min.js"></script>

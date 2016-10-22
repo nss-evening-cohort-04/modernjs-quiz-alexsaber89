@@ -8,6 +8,12 @@
   margin: 0;
 }
 
+.jumbotron p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
 #player_container {
   width: 50%;
   margin: 0 auto;
@@ -31,4 +37,12 @@
 #battle {
   margin-top: 2%;
   text-align: center;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
 }
