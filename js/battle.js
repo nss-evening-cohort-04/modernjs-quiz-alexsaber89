@@ -15,9 +15,12 @@ let playerTwo = "";
 function checkIfUsersEnteredNames() {
   if(playerOneRobotName.val() !== "" && playerTwoRobotName.val() !== "") {
     console.log("Both users have entered their name.");
-    checkIfAttackBtnShouldNowBeVisible();
+    playerOneRobotChoices.removeClass("invisible");
+    playerTwoRobotChoices.removeClass("invisible");
+    playerOneRobotChoices.addClass("visible");
+    playerTwoRobotChoices.addClass("visible");
   } else {
-    window.alert("Please enter a name for each user.");
+    console.log("Please enter a name for each user.");
   }
 }
 
@@ -75,16 +78,21 @@ function displayBattleDetails() {
   battleDetails.html(`Turn ${numberOfTurns}: ${playerOne.userName} (${playerOne.healthRange} health) attacked ${playerTwo.userName} with ${playerOne.weapon} for ${playerOne.damageRange} damage.`);
   battleDetails.append(`  ${playerTwo.userName} (${playerTwo.healthRange} health) attacked ${playerOne.userName} with ${playerTwo.weapon} for ${playerTwo.damageRange} damage.`);
   if(playerTwo.healthRange < 1) {
-    $("#myModal").modal('show');
-    $("#myModalLabel").html(`${playerOne.userName} wins!<br />`);
+    displayWinnerModal(playerOne.userName);
   } else if (playerOne.healthRange < 1) {
-    $("#myModal").modal('show');
-    $("#myModalLabel").html(`${playerTwo.userName} wins!<br />`);
+    displayWinnerModal(playerTwo.userName);
   }
+}
+
+function displayWinnerModal(winner) {
+  $("#myModal").modal('show');
+  $("#myModalLabel").html(`${winner} wins!`);
 }
 
 
 //Events
-playerOneRobotChoices.change(checkIfUsersEnteredNames);
-playerTwoRobotChoices.change(checkIfUsersEnteredNames);
+playerOneRobotName.keyup(checkIfUsersEnteredNames);
+playerTwoRobotName.keyup(checkIfUsersEnteredNames);
+playerOneRobotChoices.change(checkIfAttackBtnShouldNowBeVisible);
+playerTwoRobotChoices.change(checkIfAttackBtnShouldNowBeVisible);
 attackBtn.click(displayBattleDetails);
