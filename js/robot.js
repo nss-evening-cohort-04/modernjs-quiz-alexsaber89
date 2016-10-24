@@ -2,8 +2,8 @@
 
 //Base prototype
 const Robot = function() {
-  this.damage = null;
-  this.health = null;
+  this.healthRange = null;
+  this.damageRange = null;
   this.weapon = null;
   this.userName = null;
 };
@@ -17,7 +17,7 @@ const Drone = function() {
 
 Drone.prototype = new Robot();
 
-//Models
+//Drone Models
 const Warthog = function() {
   this.name = "Warthog";
   this.healthRange = Math.floor(Math.random()*(60-30+1)+30);//health range between 30 and 60
@@ -44,7 +44,7 @@ const Bipedal = function() {
 
 Bipedal.prototype = new Robot();
 
-//Models
+//Bipedal Models
 const Kangaroo = function() {
   this.name = "Kangaroo";
   this.healthRange = Math.floor(Math.random()*(75-20+1)+20);//health range between 20 and 75
@@ -70,7 +70,7 @@ const ATV = function() {
 
 ATV.prototype = new Robot();
 
-//Models
+//ATV Models
 const Raptor = function() {
   this.name = "Raptor";
   this.healthRange = Math.floor(Math.random()*(65-30+1)+30);//health range between 30 and 65

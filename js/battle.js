@@ -2,10 +2,10 @@
 
 const attackBtnDiv = $("#attack_btn_container");
 const attackBtn = $("#attack_btn");
-const playerOneRobotChoices = $("#player_1_robot");
 const playerOneRobotName = $("#player_1_name_input");
-const playerTwoRobotChoices = $("#player_2_robot");
+const playerOneRobotChoices = $("#player_1_robot");
 const playerTwoRobotName = $("#player_2_name_input");
+const playerTwoRobotChoices = $("#player_2_robot");
 const battleDetails = $("#battle");
 let numberOfTurns = 0;
 let playerOne = "";
@@ -26,12 +26,13 @@ function checkIfAttackBtnShouldNowBeVisible() {
     attackBtnDiv.removeClass("invisible");
     attackBtnDiv.addClass("visible");
     playerOne = createNewPlayerObject(playerOneRobotChoices.val());
-    playerOne.userName = playerOneRobotName.val();
     playerTwo = createNewPlayerObject(playerTwoRobotChoices.val());
+    playerOne.userName = playerOneRobotName.val();
     playerTwo.userName = playerTwoRobotName.val();
   }
 }
 
+//Creates new instance of model, based on player's selection
 function createNewPlayerObject(playerChoice) {
   let player = "";
   switch (playerChoice) {
