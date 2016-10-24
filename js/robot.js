@@ -1,0 +1,88 @@
+"use strict";
+
+//Base prototype
+const Robot = function() {
+  this.healthRange = null;
+  this.damageRange = null;
+  this.weapon = null;
+  this.userName = null;
+};
+
+
+//Type: Drone
+const Drone = function() {
+  this.weapon = "Stinger Missiles";
+  this.movement = "Aerial";
+};
+
+Drone.prototype = new Robot();
+
+//Drone Models
+const Warthog = function() {
+  this.name = "Warthog";
+  this.healthRange = Math.floor(Math.random()*(60-30+1)+30);//health range between 30 and 60
+  this.damageRange = Math.floor(Math.random()*(15-5+1)+5);//damage range between 5 and 15
+};
+
+Warthog.prototype = new Drone();
+
+
+const Hawk = function() {
+  this.name = "Hawk";
+  this.healthRange = Math.floor(Math.random()*(50-20+1)+20);//health range between 20 and 50
+  this.damageRange = Math.floor(Math.random()*(18-3+1)+3);//damage range between 3 and 18
+};
+
+Hawk.prototype = new Drone();
+
+
+//Type: Bipedal
+const Bipedal = function() {
+  this.weapon = "Kick";
+  this.movement = "Ground";
+};
+
+Bipedal.prototype = new Robot();
+
+//Bipedal Models
+const Kangaroo = function() {
+  this.name = "Kangaroo";
+  this.healthRange = Math.floor(Math.random()*(75-20+1)+20);//health range between 20 and 75
+  this.damageRange = Math.floor(Math.random()*(25-5+1)+5);//damage range between 5 and 25
+};
+
+Kangaroo.prototype = new Bipedal();
+
+const MAN = function() {
+  this.name = "MAN";
+  this.healthRange = Math.floor(Math.random()*(70-30+1)+30);//health range between 30 and 70
+  this.damageRange = Math.floor(Math.random()*(20-3+1)+3);//damage range between 3 and 20
+};
+
+MAN.prototype = new Bipedal();
+
+
+//Type: ATV
+const ATV = function() {
+  this.weapon = "Charge";
+  this.movement = "Ground";
+};
+
+ATV.prototype = new Robot();
+
+//ATV Models
+const Raptor = function() {
+  this.name = "Raptor";
+  this.healthRange = Math.floor(Math.random()*(65-30+1)+30);//health range between 30 and 65
+  this.damageRange = Math.floor(Math.random()*(20-5+1)+5);//damage range between 5 and 20
+};
+
+Raptor.prototype = new ATV();
+
+const Jeep = function() {
+  this.name = "Jeep";
+  this.healthRange = Math.floor(Math.random()*(80-20+1)+20);//health range between 20 and 80
+  this.damageRange = Math.floor(Math.random()*(30-5+1)+5);//damage range between 5 and 30
+};
+
+Jeep.prototype = new ATV();

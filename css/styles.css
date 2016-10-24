@@ -1,0 +1,48 @@
+.jumbotron {
+  height: 10%;
+  padding: 3% 0;
+}
+
+.jumbotron h1 {
+  text-align: center;
+  margin: 0;
+}
+
+.jumbotron p {
+  margin-top: 10px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+#player_container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#player_options_container {
+  display: flex;
+  margin: 0 auto;
+}
+
+#player_1,
+#player_2 {
+  width: 50%;
+  margin: 0 1%;
+}
+
+#attack_btn_container {
+  text-align: center;
+}
+
+#battle {
+  margin-top: 2%;
+  text-align: center;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
